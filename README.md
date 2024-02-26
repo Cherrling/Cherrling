@@ -2,8 +2,6 @@
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
 
  苦逼大学生/卷卷卷不过直接开躺/日常喜欢凿扑克打游戏/坚持白日梦主义😋😋
-
-我正在做的项目[HIT-OpenCS](https://github.com/Cherrling/HIT-OpenCS)
  
 <!--
 **Cherrling/Cherrling** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
