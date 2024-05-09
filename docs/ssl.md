@@ -10,10 +10,8 @@ https://blog.csdn.net/weixin_43408952/article/details/124727681
 
 ### TLS1.2 完整流程图：
 
-![JvkxFK7.png](https://iili.io/JvkxFK7.png)
-
-![JvkiT9j.png](https://iili.io/JvkiT9j.png)
-
+![alt text](assets/ssl/image.png)
+![alt text](assets/ssl/image-1.png)
 ### TLS1.3 的握手流程：
 
 LS 1.3 废弃了RSA密钥交换方案（因为RSA不具有前向保密性），仅支持(EC)DHE密钥协商方案；
@@ -24,8 +22,7 @@ TLS 1.3 可以在第一个网络往返中完成共享密钥协商和身份认证
 
 TLS 1.3 完整握手过程图示如下：
 
-![JvkPfrg.png](https://iili.io/JvkPfrg.png)
-
+![alt text](assets/ssl/image-2.png)
 
 从TLS 1.3 的握手过程可以看出；
 
@@ -64,8 +61,7 @@ enum {
 * 
 TLS 1.3握手报文ClientHello与ServeHello在进行密钥协商时并没有进行数字签名，通信双方的身份认证主要靠后续的Certificate与CertificateVerify报文保证，因为CertificateVerify报文是对之前的握手消息（自然包括密钥协商消息）进行签名，身份认证放到后面也不会影响整个握手过程的安全性。把客户端与服务器之间完整握手过程中每个握手报文的作用及传递的主要参数字段展开，如下图所示：
 
-![JvksNzQ.png](https://iili.io/JvksNzQ.png)
-
+![alt text](assets/ssl/image-3.png)
 * TLS 1.3 完整握手过程在ClientHello与ServerHello报文中交换了各自的随机数，也协商出了预备共享密钥，使用预备共享密钥生成主共享密钥的方式跟前面介绍的TLS 1.2差不多，但升级了伪随机函数PRF。
 * 
 * TLS 1.3 使用HKDF(HMAC based Key Derivation Function)生成主共享密钥（TLS 1.2使用的是PRF伪随机函数），相比PRF可以输出安全性更强的新密钥。HKDF包括extract_then_expand的两阶段过程，extract过程增加密钥材料的随机性，在TLS 1.2中使用的密钥派生函数PRF实际上只实现了HKDF的expand部分，并没有经过extract，而直接假设密钥材料的随机性已经符合要求。
@@ -94,8 +90,7 @@ TLS 1.3握手报文ClientHello与ServeHello在进行密钥协商时并没有进�
 `HTTPS` 利用 `SSL/TLS` 来加密数据包，经由 `HTTP` 进行通信。  
 其设计的主要目的是，提供对网站服务器的身份认证、保护交换数据的隐私与完整性。
 
-![Jvkog9a.png](https://iili.io/Jvkog9a.png)
-
+![alt text](assets/ssl/image-4.png)
 #### TLS/SSL
 
 TLS 与 SSL某种程度上指的是同一个概念：
@@ -105,8 +100,7 @@ TLS 与 SSL某种程度上指的是同一个概念：
 
 `SSL3.0`、`TLS1.0`由于存在[安全漏洞](https://so.csdn.net/so/search?q=%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E&spm=1001.2101.3001.7020)，已经很少被使用到。`TLS 1.3` 因改动会比较大，目前尚处在草案阶段。当前被广泛使用的是是`TLS 1.1`、`TLS 1.2`；
 
-![JvkoZFt.png](https://iili.io/JvkoZFt.png)
-
+![alt text](assets/ssl/image-5.png)
 如上图所示，`TLS/SSL`是介于TCP和HTTP之间的一层安全协议。
 
 #### HTTP
@@ -145,17 +139,15 @@ _注：Http协议不是本文重点，感兴趣的同学可参考文章：_
     Client——>Server SSL/TLS 握手完成，所有后续通信均 采用`秘钥enc_key`加密。
 
 `SSL/TLS`握手，秘钥协商的流程图 如下图所示：  
-![JvkxFK7.png](https://iili.io/JvkxFK7.png)
-
+![alt text](assets/ssl/image-6.png)
 这里以`客户端`向`百度主页`发起`Https`请求为例，用 **Wireshark抓包** 对SSL/TLS握手的各个环节进行介绍，抓包示意图如下图所示：  
-![JvkxGiN.png](https://iili.io/JvkxGiN.png)
-
+![alt text](assets/ssl/image-7.png)
 #### 2.1、Client Hello
 
 **Client Hello（ Client——>Server ）：** 客户端向服务端发送 Client Hello 消息。  
 消息中包含客户端的 `TSL版本信息`、`秘钥随机数`、`加密套件候选列表`、`压缩算法候选列表`、`扩展字段等信息`，相关信息抓包如下：
 
-![JvkxjJn.png](https://iili.io/JvkxjJn.png)
+![alt text](assets/ssl/image-8.png)
 
 各字段详细描述如下：
 
@@ -171,7 +163,7 @@ _注：Http协议不是本文重点，感兴趣的同学可参考文章：_
 **Server Hello（ Server——>Client ）：** 服务端向客户端发送 Server Hello 消息。  
 消息中包括服务端选择使用的`TSL协议版本`、`选择的加密套件`、`选择的压缩算法`、`服务端生成的随机数`等，相关信息抓包如下：
 
-![JvkxObf.png](https://iili.io/JvkxObf.png)
+![alt text](assets/ssl/image-9.png)
 
 *   Version：服务器选择的版本；
 *   Random：随机数 `random_S` 用于后续的密钥协商;
@@ -185,7 +177,7 @@ _注：到此 客户端 和 服务端 都拥有了两个随机数（random\_C+ r
 
 **Certificate（ Server——>Client ）：** 服务端下发`公钥证书`给客户端。相关信息抓包如下：
 
-![Jvkx8s2.png](https://iili.io/Jvkx8s2.png)
+![alt text](assets/ssl/image-10.png)
 
 *   `Certificate:` 服务端的公钥证书；
 
@@ -195,7 +187,7 @@ _注：Certificate 公钥证书的详细结构会在下文进行详细举例说�
 
 **Server Key Exchange（ Server——>Client ）:** 该消息的目的是 携带`密钥交换`的`额外数据`。
 
-![Jvkxg07.png](https://iili.io/Jvkxg07.png)
+![alt text](assets/ssl/image-11.png)
 
 该消息内容对于不同的协商算法套件会存在差异：
 
@@ -207,7 +199,7 @@ _注：Certificate 公钥证书的详细结构会在下文进行详细举例说�
 **Server Hello Done（ Server——>Client ）:**  
 通知`客户端`，Server端已经将所有握手消息发送完毕。
 
-![Jvkx6Je.png](https://iili.io/Jvkx6Je.png)
+![alt text](assets/ssl/image-12.png)
 
 #### 2.6、证书校验
 
@@ -224,7 +216,7 @@ _注：证书的详细校验过程将在下文进行详细介绍_
 
 **Client——>Server：** 这一步包含三个步骤，主要是 协商计算客户端、服务端通信的加密秘钥。
 
-![JvkxQzx.png](https://iili.io/JvkxQzx.png)
+![alt text](assets/ssl/image-13.png)
 
 *   Client Key Exchange  
     证书合法性验证通过之后，客户端产生随机数字`Pre-master`。  
@@ -240,7 +232,7 @@ _注：证书的详细校验过程将在下文进行详细介绍_
 
 **Change Cipher Spec Protocol（ Server——>Client ）:** 服务器同样发送 Change Cipher Spec Protocol 以告知客户端后续的通信都采用协商的`秘钥enc_key`与`算法`进行加密通信;
 
-![JvkxtsV.png](https://iili.io/JvkxtsV.png)
+![alt text](assets/ssl/image-14.png)
 
 #### 2.9、Encrypted Handshake Message
 
@@ -248,13 +240,13 @@ _注：证书的详细校验过程将在下文进行详细介绍_
 服务端：服务端会将握手过程的消息生成摘要再用`秘钥enc_key`加密，这是服务端发出的第一条加密消息;  
 客户端：客户端接收后会用`秘钥enc_key`解密，能解出来说明协商的秘钥是一致的。
 
-![Jvkxm0P.png](https://iili.io/Jvkxm0P.png)
+![alt text](assets/ssl/image-15.png)
 
 #### 2.10、Application Data （ Client——>Server ）
 
 **Application Data Client——>Server ）：** 双方已安全地协商出了同一份`秘钥enc_key`，所有的应用层数据都会用这个秘钥加密后再通过 TCP 进行可靠传输。
 
-![Jvkz9dF.png](https://iili.io/Jvkz9dF.png)
+![alt text](assets/ssl/image-16.png)
 
 #### 2.11 总结
 
@@ -308,8 +300,8 @@ Certificate Signature
 
 ```
 这里以`百度`的`Tls证书`进行举例：  
-![Jvkz3zv.png](https://iili.io/Jvkz3zv.png)
-![JvkzKsp.png](https://iili.io/JvkzKsp.png)
+![alt text](assets/ssl/image-17.png)
+![alt text](assets/ssl/image-18.png)
 
 ```
 Certificate:
@@ -394,7 +386,7 @@ Certificate:
 为了确保`客户端`获取到的`服务端公钥`不被篡改，需引入权威的第三方CA机构。  
 CA机构负责`核实`公钥`拥有者`信息、`颁发证书`(对服务端公钥进行签名)、同时为使用者`提供证书验证`服务。
 
-![JvkzB1I.png](https://iili.io/JvkzB1I.png)
+![alt text](assets/ssl/image-19.png)
 
 **CA机构 颁发证书的基本原理：**
 
@@ -452,7 +444,7 @@ Android 软件开发中，我们经常会遇到以下代码，用来忽略证书
 上一节介绍证书校验场景，适用于`服务器证书`的签发机构就是`Ca机构`。  
 实际证书申请中，由于权威的`CA机构`数量不多，若所有的`服务器证书`都向权威CA机构申请，那么CA机构的工作量就会非常大。因此CA机构采取`授权` `二级机构`的方式来管理证书申请，经`授权`的`二级机构`也可以签发`服务器证书`。
 
-![JvkzuIf.png](https://iili.io/JvkzuIf.png)
+![alt text](assets/ssl/image-20.png)
 
 #### 4.1、证书链校验
 
@@ -469,7 +461,7 @@ Android 软件开发中，我们经常会遇到以下代码，用来忽略证书
     c、然后对比两个摘要信息。
 *   `客户端`通过`中间证书`中`签发机构信息`，客户端本地查找到`根证书公钥`；利用`根证书公钥`进行`中间证书`的签名验证。
 
-![JvkzY1S.png](https://iili.io/JvkzY1S.png)
+![alt text](assets/ssl/image-21.png)
 
 #### 4.2、中间证书怎么获取？
 
@@ -477,7 +469,7 @@ Android 软件开发中，我们经常会遇到以下代码，用来忽略证书
 
 这里仍以`百度`的`Tls证书`进行举例，百度`服务器证书` `签发者公钥`（中间机构公钥）通过下图中的URI获取：
 
-![Jvkzs2t.png](https://iili.io/Jvkzs2t.png)
+![alt text](assets/ssl/image-22.png)
 
 #### 五、参考
 

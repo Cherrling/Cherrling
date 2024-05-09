@@ -18,7 +18,7 @@
 
 为了方便进行事后分析检讨，通常做毗邻的房间架设录像设备，透过镶嵌防弹玻璃的小窗，将训练过程录下来，供时候分析研讨使用。
 
-![](https://img.junpin360.com/d/file/p/2016/09-01/1472708022127189.png-.jpg)
+![alt text](assets/killing-house/image.png)
 
 图注：
     
@@ -46,7 +46,7 @@
 
 当然，最理想的方法是采用水泥预制板搭建，内外表面都如同室内杀人房铺上木板或者橡胶防止跳弹。但造价昂贵，只能有钱土豪单位才能办到。
 
-![](https://img.junpin360.com/d/file/p/2016/09-01/1472708178882969.png-.jpg)
+![alt text](assets/killing-house/image-1.png)
 
 墙体结构：
 
@@ -62,7 +62,7 @@
 
 6内外铺设厚木板
 
-![](https://img.junpin360.com/d/file/p/2016/09-01/1472708372188264.png-.jpg)
+![alt text](assets/killing-house/image-2.png)
 
 
 轮胎房俯视图：
@@ -88,7 +88,7 @@
 
 模拟街道一般以木结构组成，方便每隔一段时间后变更不惧。凹陷的低地或者盆地是设置模拟街道的理想地点，除了进行实弹射击训练时，不会对四周环境构成危险外，不同的水平面和斜面更可以模拟依山而建的街道，另训练环境更多变化。
 
-![](https://img.junpin360.com/d/file/p/2016/09-01/1472708569774098.png-.jpg)
+![alt text](assets/killing-house/image-3.png)
 
 1 T字形街道
 

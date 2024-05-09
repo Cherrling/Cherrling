@@ -20,7 +20,7 @@ Discord国内连不上
 
 安装汉化包后重启TeamSpeak，你应该会看到这样的界面
 
-![JEDb5EF.png](https://iili.io/JEDb5EF.png)
+![alt text](assets/ts/image.png)
 
 点击左上角的`连接` - `连接服务器`
 
@@ -28,13 +28,13 @@ Discord国内连不上
 
 如果服务器没有加密，就把密码位置留空
 
-![JEDbtjV.png](https://iili.io/JEDbtjV.png)
+![alt text](assets/ts/image-1.png)
 
 成功登入后，你应该可以看到类似这样的界面
 
 左侧代表当前服务器的不同频道，只有在同一频道里的人可以互相听见声音。
 
-![JEDmYnS.png](https://iili.io/JEDmYnS.png)
+![alt text](assets/ts/image-2.png)
 
 ## 调整感应麦
 
@@ -46,4 +46,4 @@ Discord国内连不上
 
 一般情况下，推荐打开下方的回声抑制(Echo reduction) 回声消除(Echo cancellation) 以及 高级选项(Advanced Options)，但具体请根据个人情况及设备的不同，自行判断。
 
-![JEDmZSs.png](https://iili.io/JEDmZSs.png)
+![alt text](assets/ts/image-3.png)

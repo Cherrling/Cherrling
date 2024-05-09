@@ -4,4 +4,5 @@
 * [TeamSpeak速通教程](/ts.md)
 * [什么是KillingHouse](/killing-house.md)
 * [HTTPS与TLS证书链校验](/ssl.md)
-*[Docker安装](/docker.md)
+* [Docker安装](/docker.md)
+* [Github教育资格申请速通](/copilot.md)
