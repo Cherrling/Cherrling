@@ -7,3 +7,4 @@
 * [Docker安装](docker.md)
 * [Github教育资格申请速通](copilot.md)
 * [计组实验速通](jizu_exp.md)
+* [CNAME与根域名](cname.md)
