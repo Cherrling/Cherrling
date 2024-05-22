@@ -1,30 +1,6 @@
-## CSMA/CD协议
+# 计算机网络
 
-![alt text](assets/hit-net/image.png)
-
-![alt text](assets/hit-net/image-1.png)
-
-![alt text](assets/hit-net/image-2.png)
-
-## 信道容量
-
-![alt text](assets/hit-net/image-3.png)
-
-
-![alt text](assets/hit-net/image-4.png)
-
-
-
-![alt text](assets/hit-net/image-5.png)
-
-
-10Mbps的以太网采用曼彻斯特码
-
-IEEE806.5令牌环网采用差分曼彻斯特码
-
-快速以太网（100BASE-TX和100BASE-FX）传输码采用的是4B5B编码
-
-* 这样只需从25=32个码中优化选择24=16个码， 以便保证足够的同步信息， 并且可以利用剩余的16个禁用码进行差错检测
+#### ~~考的一坨屎，操他妈的~~
 
 
 
@@ -55,4 +31,33 @@ https://www.cnblogs.com/jmhwsrr/p/14021035.html
 ## CIDR子网号为何能为全0或全1？
 
 因为在无分类的情况下，采用最长前缀匹配来进行路由转发，掩码与ip地址总是成对出现，所以不存在二义性的问题。
+
+## CSMA/CD协议
+
+![alt text](assets/hit-net/image.png)
+
+![alt text](assets/hit-net/image-1.png)
+
+![alt text](assets/hit-net/image-2.png)
+
+## 信道容量
+
+![alt text](assets/hit-net/image-3.png)
+
+
+![alt text](assets/hit-net/image-4.png)
+
+
+
+![alt text](assets/hit-net/image-5.png)
+
+
+10Mbps的以太网采用曼彻斯特码
+
+IEEE806.5令牌环网采用差分曼彻斯特码
+
+快速以太网（100BASE-TX和100BASE-FX）传输码采用的是4B5B编码
+
+* 这样只需从25=32个码中优化选择24=16个码， 以便保证足够的同步信息， 并且可以利用剩余的16个禁用码进行差错检测
+
 
