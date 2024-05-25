@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta charset="UTF-8" />
     <title>Cherrling</title>
-    <!-- <script defer src="https://us.umami.is/script.js" data-website-id="cba6aa0f-a5ff-46d5-99ba-2de7f618d3ff"></script> -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css" />
+    <link rel="stylesheet" href="scripts/vue.min.css" />
+    <link rel="stylesheet" href="scripts/sidebar.min.css" />
+
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
         <text y=%221em%22 font-size=%2280%22>
           😋
@@ -23,16 +24,11 @@
 
     <script>
         window.$docsify = {
-            //...
-      basePath: '/docs',
+            basePath: '/docs',
 
             name: "🤣👉🤡",
-    //   nameLink: '#/README',
 
             repo: "https://github.com/Cherrling/cherrling",
-            // hideSidebar: true,
-            // coverpage: true,
-            // onlyCover: true,
             alias: {
                 '/.*/_sidebar.md': '/_sidebar.md',
                 '/.*/_navbar.md': '/_navbar.md',
@@ -50,13 +46,12 @@
             }
         };
     </script>
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-    <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" /> -->
-    <!-- <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script> -->
-    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b9d0d89a40a04660b7e86cea2e3e255c"}'></script><!-- End Cloudflare Web Analytics -->
+    <script src="scripts/docsify.min.js"></script>
+    <script src="scripts/docsify-sidebar-collapse.min.js"></script>
+    <script src="scripts/docsify-copy-code.min.js"></script>
+    <script src="scripts/countable.min.js"></script>
+    <script src="scripts/zoom-image.min.js"></script>
+
 </body>
 
 </html>
