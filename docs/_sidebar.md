@@ -11,4 +11,5 @@
 * [计算机网络](hit-net.md)
 * [dns技术在代理环境中的应用](漫谈各种黑科技式-dns-技术在代理环境中的应用.html)
 * [Certbot安装证书速通](certbot.md)
+* [WireGuard速通](wg.md)
 
