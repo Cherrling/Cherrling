@@ -1,6 +1,8 @@
 
 # WirdGuard速通
 
+*感谢hyf先生撰写此文*
+
 windows端下载wg客户端，linux端包管理装**wg-quick**
 
 客户端配置文件
