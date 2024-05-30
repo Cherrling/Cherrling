@@ -2,10 +2,18 @@
 
 *克拉克三定律之⼀：任何⾜够先进的技术和魔法是不可区分的*
 
+---
 
 ## About me
 
-可以通过如下方式联系到我
+* 2022级信息安全本科在读
+* 小镇做题家
+* 讨厌上课
+* 有时候做点项目
+* (偶尔)常驻lug基地
+
+## Contact
+
 * 邮箱:cherrling2021@outlook.com
 * QQ:1255128007
 * Telegram:[@Cherrling](https://t.me/cherrling)
