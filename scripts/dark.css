@@ -689,9 +689,9 @@ body {
   color: #c8c8c8;
 }
 .markdown-section code {
-  background-color: #282828;
+  background-color: #353535;
   border-radius: 2px;
-  color: #fbfbfb;
+  color: #ffba6b;
   font-family: Roboto Mono, Monaco, courier, monospace;
   margin: 0 2px;
   padding: 3px 5px;
@@ -703,7 +703,7 @@ body {
 .markdown-section pre {
   -moz-osx-font-smoothing: initial;
   -webkit-font-smoothing: initial;
-  background-color: #282828;
+  background-color: #353535;
   font-family: Roboto Mono, Monaco, courier, monospace;
   line-height: 1.5rem;
   margin: 1.2em 0;
@@ -792,7 +792,7 @@ body {
 .markdown-section pre > code {
   -moz-osx-font-smoothing: initial;
   -webkit-font-smoothing: initial;
-  background-color: #282828;
+  background-color: #353535;
   border-radius: 2px;
   color: #fbfbfb;
   display: block;
