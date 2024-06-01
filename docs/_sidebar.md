@@ -13,4 +13,5 @@
 * [Certbot安装证书](certbot.md)
 * [WireGuard](wg.md)
 * [Nvidia及Cuda驱动](nvidia.md)
+* [折腾debian服务器](debian.md)
 
