@@ -15,4 +15,6 @@
 * [Nvidia及Cuda驱动](nvidia.md)
 * [折腾debian服务器](debian.md)
 * [密码学中问题](cryptography.md)
+* [CTF](ctf/)
+  * [20240615选修课](ctf/20240615-writeup.md)
 
