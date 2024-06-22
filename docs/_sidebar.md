@@ -21,4 +21,5 @@
 * [密码学中问题](cryptography.md)
 * [CTF](ctf/)
   * [20240615选修课](ctf/20240615-writeup.md)
+  * [train2024](_sidebar.md)
 
