@@ -44,13 +44,9 @@ https://www.cnblogs.com/jmhwsrr/p/14021035.html
 
 ![alt text](assets/hit-net/image-3.png)
 
-
 ![alt text](assets/hit-net/image-4.png)
 
-
-
 ![alt text](assets/hit-net/image-5.png)
-
 
 10Mbps的以太网采用曼彻斯特码
 
