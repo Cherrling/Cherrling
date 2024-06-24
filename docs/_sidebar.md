@@ -21,6 +21,6 @@
 * [CSAPP](csapp.md)
 * [CTF](ctf/)
   * [20240615选修课](ctf/20240615-writeup.md)
-  * [train2024](_sidebar.md)
+  * [train2024](ctf/train2024.md)
 * [CSAPP](csapp.md)
 * [SSH中的正向/反向代理](ssh_forward.md)
