@@ -40,7 +40,11 @@ sudo chmod -R 755 /path/to/dict
 
 #### 文件目录命令
 
-`cd`,`ls`,`pwd`,`mkdir`,`tree`,`touch`,`ln`,`chmod`,`chown`,`find`,`cp`,`scp`,`mv`,`rm`
+`cd`,`ls`,`pwd`,`mkdir`,`tree`,
+
+`touch`,`ln`,`chmod`,`chown`,`find`,
+
+`cp`,`scp`,`mv`,`rm`
 
 
 ### Linux文件查看编辑
