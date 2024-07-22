@@ -2,7 +2,7 @@
 
 ### 安装
 首先，您需要添加Docker官方仓库以获取最新的Docker软件包。在终端中执行以下命令：
-```
+```shell
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -10,13 +10,13 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 ```
 随后，更新包列表并安装Docker Community Edition（CE）。执行以下命令完成安装：
 
-```
+```shell
 sudo apt update
 sudo apt install docker-ce
 ```
 
 安装完成后，Docker服务将自动启动。您可以使用以下命令检查Docker服务的状态：
-```
+```shell
 sudo systemctl status docker
 ```
 
@@ -24,7 +24,7 @@ sudo systemctl status docker
 
 
 为了验证安装是否成功，您可以运行以下命令来检查Docker版本：
-```
+```shell
 docker --version
 ```
 如果显示Docker版本号，则表示安装成功。
@@ -59,8 +59,8 @@ docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.
 
 
 
-## latest标签或unstable标签
-```
+##  Qbittorrent： latest标签或unstable标签
+```shell
 docker run -dit \
   -v /root/qbittorrent:/data `# 冒号左边请修改为你想在本地保存的路径，这个路径用来保存你个人的配置文件` \
   -e PUID="1000"        `# 输入id -u可查询，群晖必须改` \
@@ -78,3 +78,21 @@ docker run -dit \
   --hostname qbittorrent \
   nevinee/qbittorrent:4.6.2   `# 如想参与qbittorrent测试工作，可以指定测试标签nevinee/qbittorrent:unstable`
 ```
+
+## Teamspeak Docker
+
+https://www.cnblogs.com/CodeAndMoe/p/18087680
+
+```shell
+sudo docker pull teamspeak
+sudo docker run --restart=always -d -p 9987:9987/udp -p 10011:10011 -p 30033:30033 -e TS3SERVER_LICENSE=accept teamspeak
+sudo docker ps
+sudo docker logs {容器ID}
+```
+防火墙打开 9987 UDP 端口，10011 和 30033 TCP端口
+
+9987 端口：语音服务端口
+
+30033 端口：文件传输
+
+10011 端口：服务器查询
