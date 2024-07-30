@@ -1,12 +1,14 @@
 
 # WirdGuard速通
 
+2024.07.31 ~~吗的，配 wg 把机器配崩了~~，多亏 BC 神出手相救
+
 *感谢hyf先生撰写此文*
 
 windows端下载wg客户端，linux端包管理装**wg-quick**
 
 客户端配置文件
-```
+```conf
 [Interface]
 PrivateKey = [客户端私钥]
 Address = 192.168.132.2/24
@@ -21,7 +23,7 @@ PersistentKeepalive = 10
 
 服务端配置文件 文件名和服务名自动对应。举例：起名为wg0.conf
 
-```
+```conf
 [Interface]
 ListenPort = [服务器端口]
 Address=192.168.132.1/24
