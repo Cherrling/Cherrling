@@ -1,6 +1,5 @@
-
 * [机场相关及使用说明](v2.md)
-* [Ubuntu速查](ubuntu.md)
+* [linux命令速查](linux.md)
 * [TeamSpeak速通教程](ts.md)
 * [什么是KillingHouse](killing-house.md)
 * [HTTPS与TLS证书链校验](ssl.md)
@@ -22,5 +21,9 @@
 * [CSAPP](csapp.md)
 * [CTF](ctf/)
   * [20240615选修课](ctf/20240615-writeup.md)
-  * [train2024](_sidebar.md)
+  * [train2024](ctf/train2024.md)
+  * [春秋杯](ctf/ichunqiu.md)
+* [CSAPP](csapp.md)
 * [SSH中的正向/反向代理](ssh_forward.md)
+* [我在PLCT](plct)
+* [Tailscale自建Derp](derp.md)
