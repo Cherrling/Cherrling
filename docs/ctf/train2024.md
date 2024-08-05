@@ -1,3 +1,54 @@
+## broadcast Problem ID: 52
+
+https://www.ruanx.net/rsa-solutions/  
+
+低加密指数广播攻击
+
+原题：
+```python
+from Crypto.Util.number import *
+import gmpy2
+from secret import flag
+
+m = bytes_to_long(flag)
+assert m.bit_length() < 240
+
+e = 11
+n = [getPrime(256) * getPrime(256) for _ in range(12)]
+
+def enc(i):
+    return gmpy2.powmod(m, e, n[i])
+
+with open('enc.txt', 'w') as f:
+    for x in range(12):
+        f.write(f'{enc(x)} {n[x]}\n')
+```
+
+dec:
+```python
+from Crypto.Util.number import *
+import gmpy2
+# 中国剩余定理
+def crt(n, c):
+    N = 1
+    for i in n:
+        N *= i
+    result = 0
+    for i in range(len(n)):
+        M = N // n[i]
+        result += c[i] * M * gmpy2.invert(M, n[i])
+    return result % N
+res=crt(n, c)
+# res 开11次方
+res, flag = gmpy2.iroot(res, 11)
+print(flag)
+print(res)
+# res转ascii
+print(long_to_bytes(res))
+```
+
+
+---
 
 ## 音乐会 Problem ID: 2
 
