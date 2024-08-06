@@ -17,6 +17,37 @@ curl https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.s
 ```
 
 
+## Oh-My-Zsh
+
+```shell
+sudo apt install zsh
+sudo chsh -s /bin/zsh
+```
+
+```shell
+sudo sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+```shell
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+```shell
+# 在 .zshrc 中
+plugins=(   git
+            python
+            z
+            copyfile
+            copypath
+            zsh-autosuggestions
+            zsh-syntax-highlighting
+)
+
+
+```
+
+
+
 ## Docker安装
 
 ### 安装
