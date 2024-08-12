@@ -47,6 +47,15 @@ plugins=(   git
 ```
 
 
+## Debian 解决输入法问题
+
+https://zhuanlan.zhihu.com/p/691125259
+
+Xwayland/X11下应用程序无法输入(Chromium系程序)/Gtk2程序(GIMP 2.10/pinentry-gtk-2(GPG Agent Pin输入对话框))无法输入
+临时解决方案
+
+Chromium:在 ~/.config/gtk-3.0/settings.ini 里写下 gtk-im-module=fcitx
+
 
 ## Docker安装
 
