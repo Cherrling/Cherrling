@@ -24,5 +24,6 @@
   * [春秋杯](ctf/ichunqiu.md)
 * [CSAPP](csapp.md)
 * [SSH中的正向/反向代理](ssh_forward.md)
-* [我在PLCT](plct)
+* [我在PLCT](plct/)
+  * [梦开始的地方](plct/init.md)
 * [Tailscale自建Derp](derp.md)
