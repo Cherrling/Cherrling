@@ -28,4 +28,4 @@
   * [梦开始的地方](plct/init.md)
   * [第一个pr：工作流程概述](plct/first_pr.md)
 * [Tailscale自建Derp](derp.md)
-
+* [KMS一键激活Windows](kms.md)
