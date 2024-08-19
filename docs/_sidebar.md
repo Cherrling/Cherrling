@@ -26,4 +26,6 @@
 * [SSH中的正向/反向代理](ssh_forward.md)
 * [我在PLCT](plct/)
   * [梦开始的地方](plct/init.md)
+  * [第一个pr：工作流程概述](plct/first_pr.md)
 * [Tailscale自建Derp](derp.md)
+
