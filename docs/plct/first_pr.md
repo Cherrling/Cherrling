@@ -8,8 +8,8 @@
 如果你成功通过了 pre-task，与 plct 签订了契约，那么恭喜你，此时你已经算是一个正式的实习生了。
 接下来 mentor 或者 HR 会大概给你讲一下在 plct 按产出数量计费的工资规则，然后……就没了？
 
-是的，至少在撰写此文的 2024.08，plct 的实习生岗位还没有比较傻瓜式的实习生入门指南。
-如果你是没有太多“大公司”实习经历的普通鼠鼠，仅仅用过 git 做过简单的，3-5人内的小范围协作的话，plct 岗位复杂的工作流程很容易搞得你一头雾水。
+是的，至少在撰写此文的 2024.08，`J128-甲辰计划的 deepin 联合实习生`岗位还没有比较傻瓜式的实习生入门指南。
+如果你是没有太多“大公司”实习经历的普通鼠鼠，仅仅用过 git 做过简单的，3-5人内的小范围协作的话，该岗位复杂的工作流程很容易搞得你一头雾水。
 因为在官方文档的协作流程指南中并没有一套较好的示例。此时比较好的方法是直接摇人，找一个有些资历的实习生问一问学一学。
 或者你可以完整阅读此文，笔者将手把手教你如何在 plct 做出自己的第一份贡献~~（第一笔钱）~~。
 
@@ -85,9 +85,58 @@ git commit
 ```
 在弹出的编辑器里粘进去刚才复制的第一行 changelog，在自己稍作修改，写明此次提交将该软件包更新到了什么版本。
 
-这时候就可以`git push`了，然后在 github 把你这次 commit 给 deepin 下面的仓库发 PR ，同样在标题中注明你这次 PR 干了什么，升级到了什么版本。
+这时候就可以`git push`了，然后在 github 把你这次 commit 给 deepin 下面的仓库发 PR ，
+同样在标题中注明你这次 PR 干了什么，升级到了什么版本。
 
+## 3.线上 PR 
 
+当你提交了 PR 之后，它大概应该长这个样子：
 
+!> 这个 PR 应该是从你自己刚才 fork 的仓库，请求合并进 deepin 下对应的软件仓库
 
+https://github.com/deepin-community/icmake/pull/4
 
+![alt text](assets/first_pr/image.png ':size=30%')
+
+然后你就可以稍事休息，等待该项目涉及的 maintainer 审阅你的代码，
+如果他们觉得你的代码可以去测试打包的话，他们会在下面评论 `/ok-to-test`
+
+![alt text](assets/first_pr/image-5.png)
+
+需要等差不多十几二十分钟，然后你可以去看一下这个 PR 有没有编译通过，比如在这里：
+
+https://build.deepin.com/package/show/deepin:CI:deepin-community:icmake:PR-4/icmake
+
+![alt text](assets/first_pr/image-1.png)
+
+编译通过后，至少说明你这个包的代码是没有大问题的，然后你可以申请将这个包集成进 deepin 发行版的仓库中，
+你需要在这个 PR 下面的评论区输入 `/integrate`
+
+![alt text](assets/first_pr/image-2.png)
+
+然后 deepin 相关的 bot 会自动生成相关和 PR 和 issue 
+
+https://github.com/deepin-community/Repository-Integration/pull/1895
+
+然后在这个 PR 里可以找到一个类似这样的链接：
+
+https://github.com/linuxdeepin/developer-center/issues/10426
+
+这就是我们后续需要操作的 issue 
+
+![alt text](assets/first_pr/image-3.png)
+
+然后你需要在这个 issue 里发一条评论，说明你这次集成请求主要干了什么，比如这样：
+
+![alt text](assets/first_pr/image-4.png)
+
+然后一段时间内就不需要你操作了，项目主管会指派一个测试人员去测试你这个包跑起来有没有什么问题
+
+![alt text](assets/first_pr/image-6.png ':size=30%')
+
+需要注意的是，一次一般的合并集成流程会涉及 2 个 PR 和 1 个 issue ，其中第一个 PR 是我们自己提交的，第二个 PR 和 issue 是deepin 的机器人自动生成的。
+我们需要操作的是第一个 PR ，在其中发送了`/integrate`申请集成。以及在 issue 里发送我们本次申请继承所涉及的具体内容
+
+如果一切正常，万事顺利，那么这个包就会被合并进 deepin 的软件源内
+
+恭喜你，此时你已经完成了自己在 deepin 实习岗位的第一份有效产出，月末是有钱拿了
