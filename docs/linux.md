@@ -111,6 +111,13 @@ docker --version
 `docker image prune`：清理无用的镜像。
 
 
+## docker 网段调整
+
+https://support.hyperglance.com/knowledge/changing-the-default-docker-subnet
+
+以防止某些情况下做了端口转发后，docker 劫持内网回包
+
+
 ## Portainer安装
 ```
 docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
