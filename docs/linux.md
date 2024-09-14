@@ -20,12 +20,12 @@ curl https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.s
 ## Oh-My-Zsh
 
 ```shell
+sudo apt update
 sudo apt install zsh
-sudo chsh -s /bin/zsh
 ```
 
 ```shell
-sudo sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 ```shell
