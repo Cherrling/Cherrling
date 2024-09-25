@@ -23,7 +23,6 @@
   * [train2024](ctf/train2024.md)
   * [春秋杯](ctf/ichunqiu.md)
   * [Crypto](ctf/crypto.md)
-* [CSAPP](csapp.md)
 * [SSH中的正向/反向代理](ssh_forward.md)
 * [我在PLCT](plct/)
   * [梦开始的地方](plct/init.md)
