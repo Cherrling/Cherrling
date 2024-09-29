@@ -37,7 +37,7 @@
 ```shell
 sudo apt install devscripts
 ```
-然后，我们要按照 debian 的操作指南，定义一个 dquilt 命令： https://www.debian.org/doc/manuals/maint-guide/modify.en/html  
+然后，我们要按照 debian 的操作指南，定义一个 dquilt 命令：https://www.debian.org/doc/manuals/maint-guide/modify.zh-cn.html
 按照网页操作执行 3.1 的步骤即可，这里要注意根据你自己使用的 shell 是 `bash` 还是 `zsh` 来调整编辑 `.bashrc` 还是 `.zshrc`。
 
 一般情况下能在 obs 系统中看到 icmake 这个包，就说明这个仓库已经被创建了： https://github.com/deepin-community/icmake 
