@@ -436,9 +436,16 @@ CA机构负责`核实`公钥`拥有者`信息、`颁发证书`(对服务端公�
 **一种错误的写法：**
 
 Android 软件开发中，我们经常会遇到以下代码，用来忽略证书的域名验证，其实这是一种不安全的写法：
-
-    // 对于自签名证书，用以下代码来忽略证书的域名验证HostnameVerifier hostnameVerifier = new HostnameVerifier() {    @Override    public boolean verify(String urlHostName, SSLSession session) {		// 忽略证书的域名验证        return true;    }};
-
+    
+```java
+// 对于自签名证书，用以下代码来忽略证书的域名验证
+HostnameVerifier hostnameVerifier = new HostnameVerifier() { 
+    @Override public boolean verify(String urlHostName, SSLSession session) {		
+    // 忽略证书的域名验证        
+    return true;    
+    }
+};
+```
 ### 四、证书链校验
 
 上一节介绍证书校验场景，适用于`服务器证书`的签发机构就是`Ca机构`。  

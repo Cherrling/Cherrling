@@ -6,7 +6,7 @@
 
 学完密码学了，简单记一下涉及的小问题。
 
-### 零知识证明ZKP
+## 零知识证明ZKP
 
 ![alt text](assets/cryptography/image.png)
 
