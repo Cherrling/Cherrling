@@ -19,6 +19,8 @@ https://baijiahao.baidu.com/s?id=1797939178831168025&wfr=spider&for=pc
 
 ![alt text](assets/copilot/image-5.png)
 
+## Github 浏览器定位问题
+
 * **要关梯子，不然定位不准。**
 
 * 有时候电脑端读不到定位会导致第一步点击`Continue`没反应，因为他在反复尝试读你的GPS数据。解决方法很简单：

@@ -185,6 +185,7 @@ print(text)
 ## ezzzecc
 
 按照题中要求，已知a、b、K、G，可以暴力算出私钥k，因为k小于1000000，在可穷举的范围内
+
 ```python
 E = EllipticCurve(GF(p),[a,b])
 K = E(K)
@@ -195,7 +196,9 @@ for i in range(1000000):
 		k = i
 		break
 ```
+
 然后正常进行解密即可
+
 ```python
 c1 = E(c1)
 c2 = E(c2)
@@ -208,4 +211,5 @@ print(cipher_right//m[1])
 计算得出私钥k和解密的明文
 
 ![alt text](assets/ichunqiu/image-12.png)
-最后将两部分转码成ASCII码，即为flag的左右两部分，拼接得到flag{2d6a7e4e-02d3-11ef-8836-a4b1c1c5a2d2}
+
+最后将两部分转码成ASCII码，即为flag的左右两部分，拼接得到`flag{2d6a7e4e-02d3-11ef-8836-a4b1c1c5a2d2}`
