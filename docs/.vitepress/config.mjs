@@ -5,9 +5,15 @@ export default defineConfig({
   title: "Cherrling 的内容归档😋",
   description: "克拉克三定律之⼀：任何足够先进的技术和魔法是不可区分的",
   lastUpdated: 'Last Updated',
+
+  head: [['link', { rel: 'icon', href: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%221em%22 font-size=%2280%22>😋</text></svg>' }]],
+
+
   themeConfig: {
 
-    logo:"😋",
+    logo:"111",
+    // siteTitle:false,
+    // logo:'docs/assets/README/6FE475F45003FA1E7961C5F6F1736203D7C120CD982A1A08A730B155D5336F0D.jpg',
     outline:'deep',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
