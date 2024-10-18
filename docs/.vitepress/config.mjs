@@ -98,6 +98,10 @@ export default defineConfig({
         link: '/zfs'
       },
       {
+        text: 'Linux 开启 BBR 网络加速',
+        link: '/bbr'
+      },
+      {
         text: 'CTF',
         link: '/ctf/',
         items: [
