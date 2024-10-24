@@ -11,7 +11,6 @@ export default defineConfig({
 
   themeConfig: {
 
-    logo:"111",
     // siteTitle:false,
     // logo:'docs/assets/README/6FE475F45003FA1E7961C5F6F1736203D7C120CD982A1A08A730B155D5336F0D.jpg',
     outline:'deep',
