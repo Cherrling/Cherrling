@@ -101,6 +101,10 @@ export default defineConfig({
         link: '/bbr'
       },
       {
+        text: 'qBittorrent反代解决NAT连通性',
+        link: '/qb_proxy'
+      },
+      {
         text: 'CTF',
         link: '/ctf/',
         items: [
