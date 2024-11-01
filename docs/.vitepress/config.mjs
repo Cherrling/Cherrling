@@ -105,6 +105,10 @@ export default defineConfig({
         link: '/qb_proxy'
       },
       {
+        text: 'Grafana 监控速通',
+        link: '/grafana'
+      },
+      {
         text: 'CTF',
         link: '/ctf/',
         items: [
