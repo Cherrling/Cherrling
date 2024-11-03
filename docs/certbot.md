@@ -4,6 +4,14 @@ https://blog.csdn.net/Richardlcx/article/details/132282722
 
 `sudo apt install certbot`
 
+## 使用 DNS 验证
+
+```shell
+certbot certonly --manual --preferred-challenges dns -d *.demo.com -d demo.com
+```
+
+## 使用 Standalone 验证
+
 停止现有的 web 服务器程序，如 nginx 或 apache。这样可以避免端口冲突（视实际情况而定）。
 
 `sudo certbot certonly --standalone -d example.com -d www.example.com`
