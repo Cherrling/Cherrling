@@ -25,7 +25,11 @@ export default defineConfig({
         link: '/v2'
       },
       {
-        text: 'linux命令速查',
+        text: 'Linux 新手入门',
+        link: '/linux_noob'
+      },
+      {
+        text: 'Linux 命令速查',
         link: '/linux'
       },
       {
