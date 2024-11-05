@@ -243,35 +243,10 @@ Swap:         4094          0       4094
 * -o 或 --only-matching : 只显示匹配PATTERN 部分。
 * -w 或 --word-regexp : 只显示全字符合的列。
 
-### Linux新建用户，授予sudo权限
 
-```shell
-sudo useradd -m 用户名
-```
 
-```shell
-sudo passwd 用户名
-```
+### linux仿真环境：
 
-```shell
-sudo usermod -aG sudo username
-groups username
-```
-
-### Linux关闭ssh密码登录
-
-```shell
-sudo nano /etc/ssh/sshd_config
-```
-
-找到以下行：
-
-`#PasswordAuthentication yes`
-
-修改该行，去掉注释并将yes改为no：
-
-`PasswordAuthentication no`
-
-```shell
-sudo nano .ssh/authorized_keys
-```
+* jslinux:：http://bellard.org/jslinux/
+* JS/UIX ：http://www.masswerk.at/jsuix/index.html
+* cb.vu：http://cb.vu/

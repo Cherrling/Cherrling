@@ -186,26 +186,53 @@ sudo docker logs {容器ID}
 10011 端口：服务器查询
 
 
+## Linux新建用户，授予sudo权限
 
-### linux仿真环境：
+```shell
+sudo useradd -m 用户名
+```
 
-* jslinux:：http://bellard.org/jslinux/
-* JS/UIX ：http://www.masswerk.at/jsuix/index.html
-* cb.vu：http://cb.vu/
+```shell
+sudo passwd 用户名
+```
+
+```shell
+sudo usermod -aG sudo username
+groups username
+```
+
+## Linux关闭ssh密码登录
+
+```shell
+sudo nano /etc/ssh/sshd_config
+```
+
+找到以下行：
+
+`#PasswordAuthentication yes`
+
+修改该行，去掉注释并将yes改为no：
+
+`PasswordAuthentication no`
+
+```shell
+sudo nano .ssh/authorized_keys
+```
 
 
 ## Ubuntu安装vsftpd
 
-```
+```shell
 sudo apt-get update
 sudo apt-get install vsftpd
 vsftpd -v
 ```
-```
+
+```shell
 sudo nano /etc/vsftpd.conf
 ```
 
-``` 
+```conf
 # 示例配置文件，地址： /etc/vsftpd.conf
 
 # 用来设置vsftpd是否以独立守护进程运行。
@@ -269,16 +296,15 @@ pam_service_name=vsftpd
 
 # 是否启用SSL加密连接。
 ssl_enable=NO
-
 ```
 
-```
+```shell
 sudo nano /etc/vsftpd.chroot_list
 ```
 
 将刚刚创建的FTP用户添加进去.
 
-```
+```shell
 sudo service vsftpd restart
 ```
 
@@ -288,12 +314,12 @@ sudo service vsftpd restart
 
 ## Ubuntu安装JDK
 
-```
+```shell
 sudo apt install openjdk-8-jdk
 ```
-```
+```shell
 sudo apt install default-jdk
 ```
-```
+```shell
 sudo apt install default-jre
 ```
