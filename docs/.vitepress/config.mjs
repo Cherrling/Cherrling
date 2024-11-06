@@ -113,6 +113,10 @@ export default defineConfig({
         link: '/grafana'
       },
       {
+        text: '互联网鉴权方法汇总',
+        link: '/webauth'
+      },
+      {
         text: 'CTF',
         link: '/ctf/',
         items: [
