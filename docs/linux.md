@@ -16,6 +16,15 @@ curl -L https://github.com/spiritLHLS/ecs/raw/main/ecs.sh -o ecs.sh && chmod +x 
 curl https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.sh | bash
 ```
 
+## 新机器一键速装环境
+  
+是的，截至 2024.11.07 ，我只用 Debian 系。
+
+```shell
+sudo apt -y install git curl wget vim neofetch htop btop tmux zsh lsof net-tools mtr 
+```
+
+
 ## Oh-My-Zsh
 
 ```shell
@@ -30,6 +39,13 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ```shell
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+如果是国内的机器，可以考虑使用 Cloudflare 加速：
+
+```shell
+git clone https://ghproxy.com/https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://ghproxy.com/https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 在 .zshrc 中
