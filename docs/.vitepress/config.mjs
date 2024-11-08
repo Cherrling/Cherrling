@@ -77,7 +77,7 @@ export default defineConfig({
         link: '/debian'
       },
       {
-        text: '密码学中问题',
+        text: '密码学',
         link: '/cryptography'
       },
       {

@@ -1,7 +1,40 @@
 
-# 密码学中问题
+# 密 码 学
 
-*2024.5.30*
+## 前向保密
+
+* [Wiki](https://zh.wikipedia.org/wiki/%E5%89%8D%E5%90%91%E4%BF%9D%E5%AF%86)
+
+
+
+## 迪菲-赫尔曼密钥交换 DH
+
+* [Wiki](https://zh.wikipedia.org/wiki/%E8%BF%AA%E8%8F%B2-%E8%B5%AB%E7%88%BE%E6%9B%BC%E5%AF%86%E9%91%B0%E4%BA%A4%E6%8F%9B)
+
+
+## 椭圆曲线迪菲-赫尔曼密钥交换 ECDH
+
+* [Wiki](https://zh.wikipedia.org/wiki/%E6%A9%A2%E5%9C%93%E6%9B%B2%E7%B7%9A%E8%BF%AA%E8%8F%B2-%E8%B5%AB%E7%88%BE%E6%9B%BC%E9%87%91%E9%91%B0%E4%BA%A4%E6%8F%9B)
+
+
+
+## Pohlig–Hellman算法
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 学完密码学了，简单记一下涉及的小问题。
