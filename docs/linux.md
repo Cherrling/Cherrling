@@ -21,9 +21,16 @@ curl https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.s
 是的，截至 2024.11.07 ，我只用 Debian 系。
 
 ```shell
-sudo apt -y install git curl wget vim neofetch htop btop tmux zsh lsof net-tools mtr 
+sudo apt -y install git curl wget vim neofetch htop btop tmux zsh lsof net-tools mtr vnstat 
 ```
 
+### NextTrace
+
+https://github.com/nxtrace/NTrace-core
+
+```shell
+curl nxtrace.org/nt |bash
+```
 
 ## Oh-My-Zsh
 
