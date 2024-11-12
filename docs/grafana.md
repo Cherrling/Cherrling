@@ -99,3 +99,79 @@ https://grafana.com/grafana/dashboards/
 https://grafana.com/grafana/dashboards/1860-node-exporter-full/
 
 然后即可看到 Dashboard 的数据。
+
+## 配置 systemd 实现开机自启
+
+注意权限，不然拉不起来
+
+记得改为自己配置的用户名和路径
+
+在 `/etc/systemd/system/node_exporter.service`
+
+```shell
+sudo vim /etc/systemd/system/node_exporter.service
+```
+
+```conf
+[Unit]
+Description=Node Exporter
+After=network.target
+
+[Service]
+User=cherrling
+ExecStart=/opt/grafana/node_exporter/node_exporter
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+
+在 `/etc/systemd/system/prometheus.service`
+
+```shell
+sudo vim /etc/systemd/system/prometheus.service
+```
+
+```conf
+[Unit]
+Description=Prometheus
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=cherrling
+WorkingDirectory=/opt/grafana/prometheus
+# ExecStart=/opt/grafana/prometheus/prometheus --config.file=/opt/grafana/prometheus/prometheus.yml --storage.tsdb.path=/opt/grafana/prometheus/data
+ExecStart=/opt/grafana/prometheus/prometheus 
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+
+重载 systemd
+
+```shell
+sudo systemctl daemon-reload
+```
+
+启动服务
+
+```shell
+sudo systemctl start node_exporter
+sudo systemctl start prometheus
+```
+
+开机自启
+
+```shell
+sudo systemctl enable node_exporter
+sudo systemctl enable prometheus
+```
+
+检查服务状态
+
+```shell
+sudo systemctl status node_exporter
+sudo systemctl status prometheus
+```
