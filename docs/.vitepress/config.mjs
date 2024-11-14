@@ -117,6 +117,10 @@ export default defineConfig({
         link: '/webauth'
       },
       {
+        text: 'PT 作弊方式一览',
+        link: '/pt_hack'
+      },
+      {
         text: 'CTF',
         link: '/ctf/',
         items: [
