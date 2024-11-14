@@ -209,6 +209,21 @@ sudo docker logs {容器ID}
 10011 端口：服务器查询
 
 
+## 流量消耗器
+
+好 tm 有病的玩意，不过也是让我想起了一众被刷的镜像站
+
+https://www.right.com.cn/forum/thread-8351068-1-1.html
+
+```shell
+wget -O /dev/null https://speed.cloudflare.com/__down?bytes=1000000000000
+```
+
+还有 web 版
+
+https://shua.leyz.top/
+
+
 ## Linux新建用户，授予sudo权限
 
 ```shell
