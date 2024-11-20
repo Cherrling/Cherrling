@@ -121,6 +121,10 @@ export default defineConfig({
         link: '/pt_hack'
       },
       {
+        text: 'Vitepress 实现图片放大',
+        link: '/image-zoom'
+      },
+      {
         text: 'CTF',
         link: '/ctf/',
         items: [
@@ -157,6 +161,10 @@ export default defineConfig({
           {
             text: '第一个pr：工作流程概述',
             link: '/plct/first_pr'
+          },
+          {
+            text: 'Topic 工作流程概述',
+            link: '/plct/topic'
           }
         ]
       },
