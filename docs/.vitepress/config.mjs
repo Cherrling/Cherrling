@@ -125,6 +125,10 @@ export default defineConfig({
         link: '/image-zoom'
       },
       {
+        text: '使用 Netch + Clash 自建加速器',
+        link: '/netch'
+      },
+      {
         text: 'CTF',
         link: '/ctf/',
         items: [
