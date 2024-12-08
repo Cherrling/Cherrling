@@ -13,16 +13,16 @@ Nginx 是一个高性能的 HTTP 和反向代理服务器，它可以作为一�
 
 ```bash
 sudo apt update
-sudo apt install nginx
-sudo nginx -v
+sudo apt install nginx -y
+sudo nginx -v # 查看 Nginx 版本
 ```
 
 如果你需要的话，设置开机自启
 
 ```bash
-sudo systemctl enable nginx
-sudo systemctl start nginx
-sudo systemctl status nginx
+sudo systemctl enable nginx # 设置开机自启
+sudo systemctl start nginx # 启动 Nginx
+sudo systemctl status nginx # 查看 Nginx 状态
 ```
 
 常用命令：
@@ -107,6 +107,30 @@ server {
 这时访问 `http://localhost` 就会被转发到 `http://backend_server:port`。对外网来说，Nginx 就是一个反向代理站点。
 
 
+### 别忘了重启
+
+修改配置文件后，别忘了重新加载 Nginx 配置，否则修改不会生效。
+
+你可以先检查配置文件是否正确
+
+```bash
+sudo nginx -t
+```
+
+如果没有问题，就重新加载配置文件
+
+```bash
+sudo nginx -s reload
+```
+
+或者使用
+    
+```bash
+sudo systemctl reload nginx
+```
+
+
+
 ## 进阶教程
 
 ### Nginx 名词扫盲
@@ -176,6 +200,7 @@ Nginx 的一个十分炫酷的功能就是可以实现一台主机上运行多�
 
 * 对于请求 `example.org` 和 `www.example.org`，Nginx 会使用第二个 server 块来处理请求。对应的网站根目录是 `/var/www/example.org`。
 
+* 对于其他请求，Nginx 会返回 404 错误。
 ```nginx
 server {
     listen 80;  # 监听的端口
@@ -185,7 +210,6 @@ server {
         try_files $uri $uri/ =404;
     }
 }
-
 server {
     listen 80;  # 监听的端口
     server_name example.org www.example.org;  # 指定的域名
@@ -193,12 +217,151 @@ server {
     location / {
         try_files $uri $uri/ =404;
     }
+server {
+    listen 80 default_server;  # 默认站点
+    server_name _;  # 默认域名
+    root /var/www/default;  # 默认网站根目录
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+```
+注意到除了指定的域名外，还有一个 `_`，它表示默认域名。如果请求的域名不在 server_name 中，Nginx 会使用 `_` 对应的 server 块来处理请求。
+那 `default_server` 又是什么意思呢？它表示默认站点，当请求的域名不在 server_name 中时，Nginx 会使用 `default_server` 对应的 server 块来处理请求。
+一般建议为 Nginx 配置一个默认站点，用于处理未知域名的请求。
+
+但是要注意的是，如果你只写了 `listen 80 default_server;`，比如：
+
+```nginx
+server {
+    listen 80 default_server;
+    # 缺少 server_name 指令
+    root /var/www/default;
+    location / {
+        try_files $uri $uri/ =404;
+    }
 }
 ```
 
+只写了 `listen 80 default_server;` 而没有 `server_name` 指令，Nginx 仍然会将该 server 块标记为默认服务器，但由于没有指定 server_name，它将会匹配所有请求的 Host 头。
+在这种情况下，任何发送到 80 端口的请求（无论 Host 头是什么）都会被这个 server 块处理，因为它是默认服务器。
+
+如果只写了 `server_name _;`，比如：
+
+```nginx
+server {
+    # 缺少 listen 指令
+    server_name _;
+    root /var/www/default;
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+```
+只写了 `server_name _;` 而没有 listen 指令，Nginx 将不会知道在哪个端口上监听这个 server 块，所以Nginx 不会启动这个 server 块，不会处理任何请求。
+
+
+#### Location 块详解
+
+一个典型的 location 块如下：
+
+```nginx
+location [modifier] /path/ {
+    # 处理请求的指令
+}
+```
+
+首先来看 `modifier`，它是一个可选的修饰符，用于修改 location 块的匹配规则。常用的修饰符有：
+
+* 前缀匹配
+
+前缀匹配是 location 块的默认匹配规则，只要请求的路径以 location 块的路径开头，就会匹配成功。例如：
+
+```nginx
+location /example {
+    # 处理请求 /example 和 /example/xxx
+    return 200 "This is a prefix match.";
+}
+```
+
+
+
+
+* `=`
+
+
+精确匹配，只有请求的路径与 location 块的路径完全相同时才匹配。
+
+```nginx
+location = /example {
+    # 处理请求 /example
+    # 不处理 /example/xxx
+    return 200 "This is an exact match.";
+}
+```
+  
+* `~`
+
+区分大小写的正则匹配。
+
+
+* `~*`
+
+不区分大小写的正则匹配。
+
+正则匹配的例子是：
+
+```nginx
+location ~ /example[0-9] {
+    # 处理请求 /example1, /example2, ...
+    return 200 "This is a case-sensitive regex match.";
+}
+location ~ \.php$ {
+    # 处理以 .php 结尾的请求
+    include fastcgi_params;
+    fastcgi_pass 127.0.0.1:9000;
+}
+
+location ~* \.(jpg|jpeg|png)$ {
+    # 处理 jpg、jpeg 和 png 文件，不区分大小写
+    root /var/www/html/images;
+}
+```
+
+
+* `^~`
+
+ 通配符匹配，如果请求的 URI 以指定的路径开头，且该路径是最长的前缀匹配，则使用该 location 块。它优先于正则匹配。
+
+
+```nginx
+location ^~ /static/ {
+    # 处理以 /static/ 开头的请求
+    root /var/www/html/static;
+}
+
+location ~ \.css$ {
+    # 处理以 .css 结尾的请求
+    root /var/www/html/styles;
+}
+```
+在这个例子中，如果请求的 URI 是 `/static/style.css`，则会匹配到第一个 location 块，因为它是以 `/static/` 开头的前缀匹配。即使 `/static/style.css` 也符合第二个正则匹配的条件，但由于第一个 location 块使用了 `^~`，Nginx 不会继续检查正则匹配。
+
+
+
+Nginx 在处理请求时会按照以下顺序匹配 location 块：
+
+1. 精确匹配 (=)。
+2. 前缀匹配（最长匹配）。
+3. 通配符匹配 (^~)。
+4. 正则匹配（~ 和 ~*，按出现顺序匹配）。
+
+
+
+
 #### SSL/TLS 配置
 
-作为 WebServer ，必不可少的功能就是支持 HTTPS。你可以在[https://cherr.cc/ssl.html](https://cherr.cc/ssl.html)找到 SSL/TLS 的原理解释。
+作为 WebServer ，必不可少的功能就是支持 HTTPS。你可以在 [https://cherr.cc/ssl.html](https://cherr.cc/ssl.html) 找到 SSL/TLS 的原理解释。
 
 首先，你需要为你的域名申请一个 SSL 证书。你可以使用免费的 Let's Encrypt 证书，也可以购买商业证书。
 假设你的证书保存在 `/etc/ssl/certs/example.com.pem` 和 `/etc/ssl/private/example.com.pem`。
@@ -369,5 +532,26 @@ http {
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
     }
+}
+```
+
+* 负载均衡算法
+
+Nginx 支持多种负载均衡算法，默认是轮询（round-robin）。你可以通过在 upstream 块中指定不同的算法来更改负载均衡策略，例如：
+
+最少连接：
+```nginx
+upstream backend {
+    least_conn;  # 使用最少连接算法
+    server backend1.example.com;
+    server backend2.example.com;
+}
+```
+IP 哈希：
+```nginx
+upstream backend {
+    ip_hash;  # 使用 IP 哈希算法
+    server backend1.example.com;
+    server backend2.example.com;
 }
 ```
