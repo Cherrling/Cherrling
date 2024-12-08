@@ -1,6 +1,8 @@
 
 # Nginx 速通指南
 
+*2024.12.8 | Cherrling*
+
 ***WebServer 不能失去 Nginx ，就如同西方不能失去耶路撒冷***
 
 Nginx 是一个高性能的 HTTP 和反向代理服务器，它可以作为一个独立的 Web 服务器，也可以作为其他 Web 服务器的反向代理服务器。
@@ -357,7 +359,13 @@ Nginx 在处理请求时会按照以下顺序匹配 location 块：
 4. 正则匹配（~ 和 ~*，按出现顺序匹配）。
 
 
+而在 Location 块中，我们可以使用一些指令来处理请求，如：
 
+* `proxy_pass http://backend_server;`：反向代理。
+* `root /var/www/html;`：指定网站根目录。
+* `try_files $uri $uri/ =404;`：尝试查找文件，如果找不到返回 404 错误。
+* `return 200 "Hello, World!";`：返回指定的状态码和内容。
+* `include fastcgi_params;`：引入 FastCGI 参数。
 
 #### SSL/TLS 配置
 
