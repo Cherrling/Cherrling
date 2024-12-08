@@ -129,6 +129,10 @@ export default defineConfig({
         link: '/netch'
       },
       {
+        text: 'Nginx 速通指南',
+        link: '/nginx'
+      },
+      {
         text: 'CTF',
         link: '/ctf/',
         items: [
