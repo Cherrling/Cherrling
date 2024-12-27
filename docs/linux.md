@@ -85,7 +85,7 @@ Chromium:在 ~/.config/gtk-3.0/settings.ini 里写下 gtk-im-module=fcitx
 首先，您需要添加Docker官方仓库以获取最新的Docker软件包。在终端中执行以下命令：
 ```shell
 sudo apt update
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 echo "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list
 ```
@@ -188,6 +188,11 @@ docker run -dit \
   --name qbittorrent \
   --hostname qbittorrent \
   nevinee/qbittorrent:4.6.2   `# 如想参与qbittorrent测试工作，可以指定测试标签nevinee/qbittorrent:unstable`
+```
+
+速通版：
+```shell
+docker run -dit -v /root/qbittorrent:/data  -e PUID="0" -e PGID="0" -e WEBUI_PORT="8080" -e BT_PORT="34567" -e QB_USERNAME="admin" -e QB_PASSWORD="passwd" -p 8080:8080  -p 34567:34567/tcp -p 34567:34567/udp --tmpfs /tmp --restart always --name qbittorrent --hostname qbittorrent nevinee/qbittorrent:4.6.2  
 ```
 
 ## Teamspeak Docker
