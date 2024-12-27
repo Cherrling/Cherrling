@@ -86,8 +86,8 @@ Chromium:在 ~/.config/gtk-3.0/settings.ini 里写下 gtk-im-module=fcitx
 ```shell
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+echo "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list
 ```
 随后，更新包列表并安装Docker Community Edition（CE）。执行以下命令完成安装：
 
@@ -242,7 +242,7 @@ groups username
 ## Linux关闭ssh密码登录
 
 ```shell
-sudo nano /etc/ssh/sshd_config
+sudo vim /etc/ssh/sshd_config
 ```
 
 找到以下行：
@@ -254,7 +254,7 @@ sudo nano /etc/ssh/sshd_config
 `PasswordAuthentication no`
 
 ```shell
-sudo nano .ssh/authorized_keys
+sudo vim .ssh/authorized_keys
 ```
 
 
@@ -337,7 +337,7 @@ ssl_enable=NO
 ```
 
 ```shell
-sudo nano /etc/vsftpd.chroot_list
+sudo vim /etc/vsftpd.chroot_list
 ```
 
 将刚刚创建的FTP用户添加进去.
