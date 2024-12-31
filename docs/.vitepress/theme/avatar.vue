@@ -13,5 +13,11 @@ const { Layout } = DefaultTheme
             <div style="text-align: center;font-size: larger;"><span>Cherrling</span></div>
         </a>
     </template>
+    <template #layout-bottom>
+        <div style="z-index: 100;text-align: center;padding: 10px;">
+          <a href="https://icp.gov.moe/?keyword=20252233" target="_blank">萌ICP备20252233号</a>
+        </div>
+        
+    </template>
   </Layout>
 </template>

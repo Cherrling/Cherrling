@@ -10,10 +10,9 @@ export default defineConfig({
 
 
   themeConfig: {
-
     // siteTitle:false,
     // logo:'docs/assets/README/6FE475F45003FA1E7961C5F6F1736203D7C120CD982A1A08A730B155D5336F0D.jpg',
-    outline:'deep',
+    outline: 'deep',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
@@ -151,7 +150,7 @@ export default defineConfig({
           {
             text: 'Crypto',
             link: '/ctf/crypto'
-          },{
+          }, {
             text: '405 欢乐赛',
             link: '/ctf/405'
 
@@ -179,7 +178,7 @@ export default defineConfig({
 
 
     ],
-    
+
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Cherrling/Cherrling' }
