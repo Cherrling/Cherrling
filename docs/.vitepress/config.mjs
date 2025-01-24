@@ -172,6 +172,10 @@ export default defineConfig({
           {
             text: 'Topic 工作流程概述',
             link: '/plct/topic'
+          },
+          {
+            text: '测试流程概述',
+            link: '/plct/test_pkgs'
           }
         ]
       },
