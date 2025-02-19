@@ -78,7 +78,27 @@ https://build.deepin.com/project/show/deepin:CI:topics:biber-20241118
 
 ![alt text](assets/topic/image-1.png)   
 
-## 4.Topic 的集成
+## 4. /topic 的使用
+
+如果因为一些奇妙的原因，想将没有使用 topic 的分支提交进某一个 topic，
+那么你可以在 PR 里输入 `/topic` + `你的 topic 名称`，比如 `/topic biber-20241118`。
+
+这个命令会将当前的 PR 合并进指定 topic 的 Project 中。你可以在 Github 页面的右侧看到这个 Project。
+
+![alt text](assets/topic/image-3.png)
+
+但是因为一些奇妙的 workflow 适配，目前通过这个方法加入 topic 的包不会被 obs 测试流程拉进 topic 构建，
+那既然如此，这指令存在的作用是什么呢？
+
+:::tip
+
+对于一些比较零散的 PR，如果他们能分别独立的构建通过，集成阶段就会产生巨大量的 issue，这是对测试和维护人员的一种精神攻击。
+
+所以我们可以通过 `/topic` 将这些 PR 合并进一个 topic，然后一次性构建，减少集成时 issue 的数量。以便于更好的测试和更快的集成。
+
+:::
+
+## 5.Topic 的集成
 
 和正常的集成输入 `/integrate` 不同，这次你需要输入 `/integr-topic` + `你的 topic 名称`，比如 `/integr-topic biber-20241118`。
 
@@ -91,3 +111,9 @@ https://build.deepin.com/project/show/deepin:CI:topics:biber-20241118
 ![alt text](assets/topic/image-2.png)
 
 然后就是正常的集成流程，触发构建通过后在 issue 里描述这次 topic 的内容，等待测试人员测试通过，然后就可以合并进 deepin 的软件源内了。
+
+:::warning
+
+需要注意的是，`/integr-topic` 实际上是从这个 topic 的 Project 中拉取所有的 PR，然后进行集成。这样可以保证通过 `/topic xxxx` 加入的 PR 也能被集成。
+
+:::
