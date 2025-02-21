@@ -180,6 +180,10 @@ export default defineConfig({
           {
             text: '测试流程概述',
             link: '/plct/test_pkgs'
+          },
+          {
+            text: '测试流程概述',
+            link: '/plct/helper'
           }
         ]
       },
