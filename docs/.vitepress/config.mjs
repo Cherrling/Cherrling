@@ -132,6 +132,10 @@ export default defineConfig({
         link: '/nginx'
       },
       {
+        text: 'Jupyter Lab 与 Nginx 反代配置',
+        link: '/jupyter'
+      },
+      {
         text: 'CTF',
         link: '/ctf/',
         items: [
