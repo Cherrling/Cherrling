@@ -182,7 +182,7 @@ export default defineConfig({
             link: '/plct/test_pkgs'
           },
           {
-            text: '测试流程概述',
+            text: '妙妙工具们',
             link: '/plct/helper'
           }
         ]
