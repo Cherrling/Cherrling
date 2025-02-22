@@ -51,3 +51,7 @@ https://wiki.kache.moe/2019/11/20/Windows-Netch/
 比如在这里我选择一个延迟比较低的香港节点
 
 ![alt text](assets/netch/image-4.png)
+
+游戏内的加速效果：
+
+![alt text](assets/netch/image-5.png)
