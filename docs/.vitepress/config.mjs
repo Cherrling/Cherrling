@@ -37,6 +37,10 @@ export default defineConfig({
                 link: '/ts'
             },
             {
+                text: 'Docker 常见问题指北',
+                link: '/docker'
+            },
+            {
                 text: '什么是KillingHouse',
                 link: '/killing-house'
             },
