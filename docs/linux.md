@@ -11,11 +11,18 @@ bash <(curl -Ls IP.Check.Place)
 ```shell
 curl -L https://github.com/spiritLHLS/ecs/raw/main/ecs.sh -o ecs.sh && chmod +x ecs.sh && bash ecs.sh -m 1
 ```
+
+```shell
+curl -L https://ghproxy.cc/https://github.com/spiritLHLS/ecs/raw/main/ecs.sh -o ecs.sh && chmod +x ecs.sh && bash ecs.sh -m 1
+```
 #### 检测VPS内存是否超售的一键脚本
 ```shell
 curl https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.sh | bash
 ```
 
+```shell
+curl https://ghproxy.cc/https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.sh | bash
+```
 ## 新机器一键速装环境
   
 是的，截至 2024.11.07 ，我只用 Debian 系。
@@ -49,6 +56,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ```
 
 如果是国内的机器，可以考虑使用 Cloudflare 加速：
+```shell
+wget https://ghproxy.cc/https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+```
 
 ```shell
 git clone https://ghproxy.cc/https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -68,6 +78,23 @@ plugins=(   git
             zsh-syntax-highlighting
 )
 ```
+
+```shell
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="ys"
+plugins=(   git
+            python
+            z
+            sudo
+            copyfile
+            copypath
+            zsh-autosuggestions
+            zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+```
+
 
 ## Debian 解决输入法问题
 
