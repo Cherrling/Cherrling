@@ -17,11 +17,11 @@ curl -L https://ghproxy.cc/https://github.com/spiritLHLS/ecs/raw/main/ecs.sh -o 
 ```
 #### 检测VPS内存是否超售的一键脚本
 ```shell
-curl https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.sh | bash
+curl -L https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.sh | bash
 ```
 
 ```shell
-curl https://ghproxy.cc/https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.sh | bash
+curl -L https://ghproxy.cc/https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.sh | bash
 ```
 ## 新机器一键速装环境
   
@@ -36,7 +36,7 @@ sudo apt -y install git curl wget vim neofetch htop btop tmux zsh lsof net-tools
 https://github.com/nxtrace/NTrace-core
 
 ```shell
-curl nxtrace.org/nt |bash
+curl -L nxtrace.org/nt |bash
 ```
 
 ## Oh-My-Zsh
