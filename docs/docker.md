@@ -3,11 +3,23 @@
 
 ## Docker安装
 
-### Tuna 镜像速通
-
+### 国内镜像速通
+https://mirrors.bfsu.edu.cn/help/docker-ce/
 https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/
 
-### 安装
+一把梭脚本
+
+```shell
+export DOWNLOAD_URL="https://mirrors.bfsu.edu.cn/docker-ce"
+curl -fsSL https://raw.githubusercontent.com/docker/docker-install/master/install.sh | sh
+```
+
+```shell
+export DOWNLOAD_URL="https://mirrors.bfsu.edu.cn/docker-ce"
+curl -fsSL https://ghproxy.cc/https://raw.githubusercontent.com/docker/docker-install/master/install.sh | sh
+```
+
+### 手动安装
 首先，您需要添加Docker官方仓库以获取最新的Docker软件包。在终端中执行以下命令：
 ```shell
 sudo apt update
@@ -37,7 +49,7 @@ docker --version
 如果显示Docker版本号，则表示安装成功。
 
 
-### 管理容器
+## 管理容器
 
 您可以使用以下命令来管理容器的生命周期和状态：
 
@@ -49,7 +61,7 @@ docker --version
 
 `docker restart container_id`：重新启动某个容器。
 
-### 清理容器和镜像
+## 清理容器和镜像
 
 您可以使用以下命令来清理无用的容器和镜像：
 
@@ -59,7 +71,7 @@ docker --version
 
 
 
-## Docker 国内镜像
+## Docker Hub 国内镜像
 
 感谢老哥 https://t.me/dockerpull
 
@@ -147,9 +159,20 @@ docker run -dit \
 ```
 
 速通版：
+
+bridge 端口映射版  
+
 ```shell
 docker run -dit -v /root/qbittorrent:/data  -e PUID="0" -e PGID="0" -e WEBUI_PORT="8080" -e BT_PORT="34567" -e QB_USERNAME="admin" -e QB_PASSWORD="passwd" -p 8080:8080  -p 34567:34567/tcp -p 34567:34567/udp --tmpfs /tmp --restart always --name qbittorrent --hostname qbittorrent nevinee/qbittorrent:4.6.2  
 ```
+
+
+走 bridge 的，可能不好处理 ipv6 
+
+如果本地端口不会撞，可以直接走 host 模式，直接映射到主机的端口上，可以自动处理好 ipv6 的问题
+
+host 模式版
+
 ```shell
 docker run -dit --network=host -v /root/qbittorrent:/data -e PUID="0" -e PGID="0" -e WEBUI_PORT="8080" -e BT_PORT="34567" -e QB_USERNAME="admin" -e QB_PASSWORD="passwd" --tmpfs /tmp --restart always --name qbittorrent --hostname qbittorrent nevinee/qbittorrent:4.6.2
 ```
@@ -159,11 +182,17 @@ docker run -dit --network=host -v /root/qbittorrent:/data -e PUID="0" -e PGID="0
 https://www.cnblogs.com/CodeAndMoe/p/18087680
 
 ```shell
-sudo docker pull teamspeak
 sudo docker run --name teamspeak --restart=always -d -p 9987:9987/udp -p 10011:10011 -p 30033:30033 -e TS3SERVER_LICENSE=accept teamspeak
-sudo docker ps
-sudo docker logs {容器ID}
 ```
+
+需要查看 logs 拿到权限密钥
+```shell
+sudo docker ps
+sudo docker logs teamspeak
+```
+
+
+
 防火墙打开 9987 UDP 端口，10011 和 30033 TCP端口
 
 9987 端口：语音服务端口

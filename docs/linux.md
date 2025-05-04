@@ -95,6 +95,11 @@ plugins=(   git
 source $ZSH/oh-my-zsh.sh
 ```
 
+## Warp 获取 ipv4/6 地址
+
+```shell
+wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh && bash menu.sh
+```
 
 ## Debian 解决输入法问题
 
