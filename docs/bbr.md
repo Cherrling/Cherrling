@@ -5,6 +5,16 @@
 ## 前提
 要想开启 TCP BBR，需要 Linux kernel 4.9+ ，如果内核版本过低的话需要升级内核。
 
+
+
+
+https://github.com/ylx2016/Linux-NetSpeed
+
+```shell
+wget -O tcpx.sh "https://github.com/ylx2016/Linux-NetSpeed/raw/master/tcpx.sh" && chmod +x tcpx.sh && ./tcpx.sh
+```
+
+
 ## 开启 TCP BBR
 执行 `lsmod | grep bbr`，如果结果中没有 `tcp_bbr` 的话就先执行
 ``` bash
