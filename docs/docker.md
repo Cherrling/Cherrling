@@ -121,7 +121,7 @@ netstat -rn
 ```
 
 ## Portainer安装
-```
+```shell
 docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 ```
 
@@ -150,7 +150,9 @@ docker run -dit \
 ```shell
 docker run -dit -v /root/qbittorrent:/data  -e PUID="0" -e PGID="0" -e WEBUI_PORT="8080" -e BT_PORT="34567" -e QB_USERNAME="admin" -e QB_PASSWORD="passwd" -p 8080:8080  -p 34567:34567/tcp -p 34567:34567/udp --tmpfs /tmp --restart always --name qbittorrent --hostname qbittorrent nevinee/qbittorrent:4.6.2  
 ```
-
+```shell
+docker run -dit --network=host -v /root/qbittorrent:/data -e PUID="0" -e PGID="0" -e WEBUI_PORT="8080" -e BT_PORT="34567" -e QB_USERNAME="admin" -e QB_PASSWORD="passwd" --tmpfs /tmp --restart always --name qbittorrent --hostname qbittorrent nevinee/qbittorrent:4.6.2
+```
 
 ## Teamspeak Docker
 
@@ -158,7 +160,7 @@ https://www.cnblogs.com/CodeAndMoe/p/18087680
 
 ```shell
 sudo docker pull teamspeak
-sudo docker run --restart=always -d -p 9987:9987/udp -p 10011:10011 -p 30033:30033 -e TS3SERVER_LICENSE=accept teamspeak
+sudo docker run --name teamspeak --restart=always -d -p 9987:9987/udp -p 10011:10011 -p 30033:30033 -e TS3SERVER_LICENSE=accept teamspeak
 sudo docker ps
 sudo docker logs {容器ID}
 ```
