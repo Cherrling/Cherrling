@@ -367,6 +367,18 @@ Nginx 在处理请求时会按照以下顺序匹配 location 块：
 * `return 200 "Hello, World!";`：返回指定的状态码和内容。
 * `include fastcgi_params;`：引入 FastCGI 参数。
 
+#### Certbot Nginx 插件
+
+```shell
+sudo apt install certbot python3-certbot-nginx
+```
+
+```shell
+sudo certbot --nginx
+```
+
+
+
 #### SSL/TLS 配置
 
 作为 WebServer ，必不可少的功能就是支持 HTTPS。你可以在 [https://cherr.cc/ssl.html](https://cherr.cc/ssl.html) 找到 SSL/TLS 的原理解释。
