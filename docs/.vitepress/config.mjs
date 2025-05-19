@@ -162,10 +162,15 @@ export default defineConfig({
                     {
                         text: 'Crypto',
                         link: '/ctf/crypto'
-                    }, {
+                    },
+                    {
                         text: '405 欢乐赛',
                         link: '/ctf/405'
 
+                    },
+                    {
+                        text: '2025 软创决赛',
+                        link: '/ctf/2025-rc'
                     }
                 ]
             },
