@@ -30,6 +30,8 @@
 * SignKirigami: [https://krgm.moe/](https://krgm.moe/)
 * pikaball: [https://pikaball.cc/](https://pikaball.cc/)
 * cclvi: [https://cclvi.cc/](https://cclvi.cc/)
+* hkbin: [https://www.hkbinbin.fun/](https://www.hkbinbin.fun/)
+* Munan: [https://sxsxno.github.io/](https://sxsxno.github.io/)
 
 <!-- ![JEQG0zJ.png](https://iili.io/JEQG0zJ.png) -->
 <!-- ![](https://p.sda1.dev/16/fa3777a0d6b4ab41b6e339a8657d0e2a/JEQG0zJ.png) -->
