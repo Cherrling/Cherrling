@@ -145,6 +145,10 @@ export default defineConfig({
                 link: '/canokey'
             },
             {
+                text: 'Time To Arch',
+                link: '/arch'
+            },
+            {
                 text: 'CTF',
                 link: '/ctf/',
                 items: [{
