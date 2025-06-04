@@ -93,7 +93,11 @@ git commit
 
 当你提交了 PR 之后，它大概应该长这个样子：
 
-!> 这个 PR 应该是从你自己刚才 fork 的仓库，请求合并进 deepin 下对应的软件仓库
+:::tips
+
+这个 PR 应该是从 `你自己` 刚才 fork 的仓库，请求合并进 `deepin` 下对应的软件仓库
+
+:::
 
 https://github.com/deepin-community/icmake/pull/4
 
@@ -136,7 +140,7 @@ https://github.com/linuxdeepin/developer-center/issues/10426
 ![alt text](assets/first_pr/image-6.png ':size=30%')
 
 需要注意的是，一次一般的合并集成流程会涉及 2 个 PR 和 1 个 issue ，其中第一个 PR 是我们自己提交的，第二个 PR 和 issue 是deepin 的机器人自动生成的。
-我们需要操作的是第一个 PR ，在其中发送了`/integrate`申请集成。以及在 issue 里发送我们本次申请集成所涉及的具体内容
+我们需要操作的是第一个 PR ，在其中发送了 `/integrate` 申请集成。以及在 issue 里发送我们本次申请集成所涉及的具体内容
 
 如果一切正常，万事顺利，那么这个包就会被合并进 deepin 的软件源内
 

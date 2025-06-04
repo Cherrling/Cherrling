@@ -12,9 +12,13 @@ Discord国内连不上
 
 ## 使用方法
 
-!> 请务必不要某国内公司制作的中文翻译版，该版本过旧，无法登陆现有的大部分 TeamSpeak 服务器。详见[为何不要使用 ts1.cn](https://teamspeak.app/docs/advanced/why-not-ts-cn/)
+:::warning
 
-首先，你需要在电脑端下载TeamSpeak客户端和汉化包，你可以在[这里](https://cherrling.lanzouo.com/iTjv61ov8kej)或者[TS中文站](https://teamspeak.app/)进行下载
+ 请务必不要某国内公司制作的中文翻译版，该版本过旧，无法登陆现有的大部分 TeamSpeak 服务器。详见[为何不要使用 ts1.cn](https://teamspeak.app/docs/advanced/why-not-ts-cn/)
+
+:::
+
+首先，你需要在电脑端下载TeamSpeak客户端和汉化包，你可以在[这里(蓝奏云)](https://cherrling.lanzouo.com/iTjv61ov8kej)或者[TS中文站](https://teamspeak.app/docs/basic/download/)进行下载
 
 下载并运行安装包后，一路下一步直至安装完成。然后双击汉化文件`Chinese_Translation_zh-CN.ts3_translation`，就可以自动安装TS的汉化包。
 
