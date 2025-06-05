@@ -21,6 +21,10 @@ export default defineConfig({
         ],
 
         sidebar: [{
+                text: 'Cherr 的妙妙导航页',
+                link: '/links'
+            },
+            {
                 text: '机场相关及使用说明',
                 link: '/v2'
             },

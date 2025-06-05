@@ -20,13 +20,13 @@ Discord国内连不上
 
 首先，你需要在电脑端下载TeamSpeak客户端和汉化包，你可以在[这里(蓝奏云)](https://cherrling.lanzouo.com/iTjv61ov8kej)或者[TS中文站](https://teamspeak.app/docs/basic/download/)进行下载
 
-下载并运行安装包后，一路下一步直至安装完成。然后双击汉化文件`Chinese_Translation_zh-CN.ts3_translation`，就可以自动安装TS的汉化包。
+下载并运行安装包后，一路下一步直至安装完成。然后双击汉化文件 `Chinese_Translation_zh-CN.ts3_translation` ，就可以自动安装TS的汉化包。
 
 安装汉化包后重启TeamSpeak，你应该会看到这样的界面
 
 ![alt text](assets/ts/image.png)
 
-点击左上角的`连接` - `连接服务器`
+点击左上角的 `连接` - `连接服务器`
 
 你只需要在这三个地方依次填入你要连接的服务器地址，服务器密码以及你希望别人看到你的昵称。
 
@@ -44,7 +44,7 @@ Discord国内连不上
 
 在客户端上方找到 `工具` - `设置`
 
-选择 `音频输入(Capture)` 选项卡，设置好你想使用的麦克风设备，选择`语音检测` - `Volume Gate` 模式
+选择 `音频输入(Capture)` 选项卡，设置好你想使用的麦克风设备，选择 `语音检测` - `Volume Gate` 模式
 
 点击开始测试，尝试对麦克风以正常音量说话，同时调节音量条上的滑杆。尽量使滑杆处在讲话时音频峰值以左，打字等杂音峰值以右。
 
