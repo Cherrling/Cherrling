@@ -153,6 +153,10 @@ export default defineConfig({
                 link: '/arch'
             },
             {
+                text: 'Proxy 深度探索',
+                link: '/proxy'
+            },
+            {
                 text: 'CTF',
                 link: '/ctf/',
                 items: [{
