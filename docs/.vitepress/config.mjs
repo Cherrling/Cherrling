@@ -157,6 +157,10 @@ export default defineConfig({
                 link: '/proxy'
             },
             {
+                text: 'Mihomo 0Days',
+                link: '/mihomo-0days'
+            },
+            {
                 text: 'CTF',
                 link: '/ctf/',
                 items: [{
