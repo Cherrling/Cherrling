@@ -161,6 +161,14 @@ export default defineConfig({
                 link: '/mihomo-0days'
             },
             {
+                text: 'AOSC 贡献指南',
+                link: '/aosc/',
+                items: [{
+                    text: 'First PR - 第一次贡献',
+                    link: '/aosc/first_pr'
+                }]
+            },
+            {
                 text: 'CTF',
                 link: '/ctf/',
                 items: [{
