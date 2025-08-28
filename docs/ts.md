@@ -12,7 +12,7 @@ Discord国内连不上
 
 ## 使用方法
 
-:::warning
+::: warning
 
  请务必不要某国内公司制作的中文翻译版，该版本过旧，无法登陆现有的大部分 TeamSpeak 服务器。详见[为何不要使用 ts1.cn](https://teamspeak.app/docs/advanced/why-not-ts-cn/)
 

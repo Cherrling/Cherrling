@@ -95,6 +95,16 @@ plugins=(   git
 source $ZSH/oh-my-zsh.sh
 ```
 
+```shell
+cd ~ 
+echo "" > .zshrc
+echo 'export ZSH="$HOME/.oh-my-zsh"' >> .zshrc
+echo 'ZSH_THEME="ys"' >> .zshrc
+echo 'plugins=(git python z sudo copyfile copypath zsh-autosuggestions zsh-syntax-highlighting)' >> .zshrc
+echo 'source $ZSH/oh-my-zsh.sh' >> .zshrc 
+```
+
+
 ## Warp 获取 ipv4/6 地址
 
 ```shell

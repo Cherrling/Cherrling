@@ -31,7 +31,7 @@
 
 比如我现在要升级 `biber` 这个包，那么分支名就可以是： `topic-biber-20241118`
 
-:::danger
+::: danger
 
 分支名需要严格以 `topic-` 开头，注意这个英文短横线，不然 obs 会无法识别。
 
@@ -90,7 +90,7 @@ https://build.deepin.com/project/show/deepin:CI:topics:biber-20241118
 但是因为一些奇妙的 workflow 适配，目前通过这个方法加入 topic 的包不会被 obs 测试流程拉进 topic 构建，
 那既然如此，这指令存在的作用是什么呢？
 
-:::tip
+::: tip
 
 对于一些比较零散的 PR，如果他们能分别独立的构建通过，集成阶段就会产生巨大量的 issue，这是对测试和维护人员的一种精神攻击。
 
@@ -102,7 +102,7 @@ https://build.deepin.com/project/show/deepin:CI:topics:biber-20241118
 
 和正常的集成输入 `/integrate` 不同，这次你需要输入 `/integr-topic` + `你的 topic 名称`，比如 `/integr-topic biber-20241118`。
 
-:::danger
+::: danger
 
 注意不是分支名称 `topic-biber-20241118`，而是 `biber-20241118`。
 
@@ -112,7 +112,7 @@ https://build.deepin.com/project/show/deepin:CI:topics:biber-20241118
 
 然后就是正常的集成流程，触发构建通过后在 issue 里描述这次 topic 的内容，等待测试人员测试通过，然后就可以合并进 deepin 的软件源内了。
 
-:::warning
+::: warning
 
 需要注意的是，`/integr-topic` 实际上是从这个 topic 的 Project 中拉取所有的 PR，然后进行集成。这样可以保证通过 `/topic xxxx` 加入的 PR 也能被集成。
 
