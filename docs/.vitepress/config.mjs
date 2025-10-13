@@ -161,6 +161,10 @@ export default defineConfig({
                 link: '/mihomo-0days'
             },
             {
+                text: '何意味？',
+                link: '/heyiwei'
+            },
+            {
                 text: 'AOSC 贡献指南',
                 link: '/aosc/',
                 items: [{
