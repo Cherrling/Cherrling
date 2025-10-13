@@ -25,7 +25,7 @@ https://bgm.tv/m/topic/group/373306
 
 先说结论：反代，但是这里有很多坑。
 
-我常用的客户端的 qBittorrent，而实际上 qBittorrent 本身就具有代理的支持，然后问题就出在这里了：
+我常用的客户端是 qBittorrent，而实际上 qBittorrent 本身就具有代理的支持，然后问题就出在这里了：
 
 ![alt text](assets/qb_proxy/image.png)
 

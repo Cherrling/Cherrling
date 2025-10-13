@@ -4,7 +4,9 @@
 ## Docker安装
 
 ### 国内镜像速通
+
 https://mirrors.bfsu.edu.cn/help/docker-ce/
+
 https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/
 
 一把梭脚本
@@ -107,7 +109,7 @@ sudo vim /etc/docker/daemon.json
 
 https://support.hyperglance.com/knowledge/changing-the-default-docker-subnet
 
-默认情况下，Docker 使用 172.17.0.0/16。在一些巨大内网环境中，尤其是在一些校内搭建对外服务的时候，这可能和用户的 IP 地址冲突。
+默认情况下，Docker 使用 `172.17.0.0/16`。在一些巨大内网环境中，尤其是在一些校内搭建对外服务的时候，这可能和用户的 IP 地址冲突。
 对于用户来说，访问的回包可能会被 Docker 拦截，导致无法访问。这时候，我们需要调整 Docker 的网段。
 
 ```shell
