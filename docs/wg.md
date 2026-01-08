@@ -1,11 +1,11 @@
 
-# WirdGuard速通
+# WireGuard速通
 
 2024.07.31 ~~吗的，配 wg 把机器配崩了~~，多亏 BC 神出手相救
 
 *感谢hyf先生撰写此文*
 
-windows端下载wg客户端，linux端包管理装**wg-quick**
+windows 端下载 wg 客户端，linux 端包管理装 `wg-quick`
 
 客户端配置文件
 ```conf
