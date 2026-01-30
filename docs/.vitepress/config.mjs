@@ -161,6 +161,10 @@ export default defineConfig({
                 link: '/mihomo-0days'
             },
             {
+                text: 'IPv4 & IPv6 速查',
+                link: '/ipv4v6'
+            },
+            {
                 text: '何意味？',
                 link: '/heyiwei'
             },
