@@ -85,10 +85,6 @@ export default defineConfig({
                 link: '/debian'
             },
             {
-                text: '密码学',
-                link: '/cryptography'
-            },
-            {
                 text: 'CSAPP',
                 link: '/csapp'
             },
@@ -169,6 +165,20 @@ export default defineConfig({
                 link: '/heyiwei'
             },
             {
+                text: '密码学与你所熟知的一切',
+                link: '/cryptography/',
+                items: [
+                    {
+                        text: "Off-The-Record Messaging",
+                        link: "/cryptography/otr"
+                    },
+                    {
+                        text: "密码学原理",
+                        link: "/cryptography/cryptography"
+                    }
+                ]
+            },
+            {
                 text: 'AOSC 贡献指南',
                 link: '/aosc/',
                 items: [{
@@ -180,7 +190,7 @@ export default defineConfig({
                 text: 'CTF',
                 link: '/ctf/',
                 items: [{
-                        text: '20240615选修课',
+                    text: '20240615选修课',
                         link: '/ctf/20240615-writeup'
                     },
                     {
