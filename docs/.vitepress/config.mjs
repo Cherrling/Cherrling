@@ -161,6 +161,10 @@ export default defineConfig({
                 link: '/ipv4v6'
             },
             {
+                text: 'Tampermonkey & Chrome 插件',
+                link: '/tampermonkey'
+            },
+            {
                 text: '何意味？',
                 link: '/heyiwei'
             },
