@@ -13,7 +13,7 @@ curl -L https://github.com/spiritLHLS/ecs/raw/main/ecs.sh -o ecs.sh && chmod +x 
 ```
 
 ```shell
-curl -L https://ghproxy.cc/https://github.com/spiritLHLS/ecs/raw/main/ecs.sh -o ecs.sh && chmod +x ecs.sh && bash ecs.sh -m 1
+curl -L https://gh.cherr.cc/https://github.com/spiritLHLS/ecs/raw/main/ecs.sh -o ecs.sh && chmod +x ecs.sh && bash ecs.sh -m 1
 ```
 #### 检测VPS内存是否超售的一键脚本
 ```shell
@@ -21,7 +21,7 @@ curl -L https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryChec
 ```
 
 ```shell
-curl -L https://ghproxy.cc/https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.sh | bash
+curl -L https://gh.cherr.cc/https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.sh | bash
 ```
 ## 新机器一键速装环境
   
@@ -57,12 +57,12 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 如果是国内的机器，可以考虑使用 Cloudflare 加速：
 ```shell
-wget https://ghproxy.cc/https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+wget https://gh.cherr.cc/https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
 ```
 
 ```shell
-git clone https://ghproxy.cc/https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://ghproxy.cc/https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://gh.cherr.cc/https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://gh.cherr.cc/https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 在 .zshrc 中
@@ -107,9 +107,33 @@ echo 'source $ZSH/oh-my-zsh.sh' >> .zshrc
 
 ## Warp 获取 ipv4/6 地址
 
+https://github.com/ViRb3/wgcf
+
+需要手动按 y 同意
+
 ```shell
-wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh && bash menu.sh
+wget https://gh.cherr.cc/https://github.com/ViRb3/wgcf/releases/download/v2.2.31/wgcf_2.2.31_linux_amd64 -O wgcf
+chmod +x wgcf
+./wgcf register
 ```
+
+记得需要去掉生成 config 里面对 ipv6 的路由
+
+```shell
+./wgcf generate
+sed -i 's/AllowedIPs = .*/AllowedIPs = 0.0.0.0\/0/' wgcf-profile.conf
+sed -i '/^\[Peer\]/a PersistentKeepalive = 25' wgcf-profile.conf
+cat wgcf-profile.conf
+```
+
+```shell
+sudo apt update -qq && sudo apt install -qq -y wireguard
+sudo cp wgcf-profile.conf /etc/wireguard/wgcf.conf
+sudo systemctl enable --now wg-quick@wgcf
+sudo systemctl status wg-quick@wgcf
+sudo wg
+```
+
 
 ## Debian 解决输入法问题
 

@@ -18,7 +18,7 @@ curl -fsSL https://raw.githubusercontent.com/docker/docker-install/master/instal
 
 ```shell
 export DOWNLOAD_URL="https://mirrors.bfsu.edu.cn/docker-ce"
-curl -fsSL https://ghproxy.cc/https://raw.githubusercontent.com/docker/docker-install/master/install.sh | sh
+curl -fsSL https://gh.cherr.cc/https://raw.githubusercontent.com/docker/docker-install/master/install.sh | sh
 ```
 
 ### 手动安装
