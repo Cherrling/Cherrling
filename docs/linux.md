@@ -297,3 +297,19 @@ sudo apt install default-jdk
 ```shell
 sudo apt install default-jre
 ```
+
+## 设置时区为上海
+
+```shell
+sudo DEBIAN_FRONTEND=noninteractive apt install -y tzdata
+```
+
+```shell
+sudo timedatectl set-timezone Asia/Shanghai
+```
+
+验证：
+
+```shell
+timedatectl
+```
