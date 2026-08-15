@@ -5,17 +5,13 @@
 
 ## About me 🤣👉🤡
 
-* 2022 级信息安全本科在读
 * 小镇做题家
 * 讨厌上课
-* 有时候做点项目
-* 常驻 lug 基地
-* 打 CTF 的菜鸡
 * 挣扎求生中……
 
 ## Contact  📞🤪
 
-* 邮箱: cherrling2021@outlook.com
+* 邮箱: me@cherr.cc
 * Telegram: [@Cherrling](https://t.me/cherrling)
 * Github: [Cherrling](https://github.com/cherrling)
 
