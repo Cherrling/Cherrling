@@ -1,7 +1,8 @@
 ### Hi there 👋
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=cherrling&show_icons=true&count_private=true)](https://github.com/anuraghazra/github-readme-stats)
 
- 苦逼大学生/卷卷卷不过直接开躺/日常喜欢凿扑克打游戏/坚持白日梦主义😋😋
+[![Anurag's GitHub stats](https://github-stats-extended.vercel.app/api?username=Cherrling)](https://github.com/stats-organization/github-stats-extended)
+
+坚持白日梦主义😋😋
  
 <!--
 **Cherrling/Cherrling** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
