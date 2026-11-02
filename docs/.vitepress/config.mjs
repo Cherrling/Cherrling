@@ -169,6 +169,10 @@ export default defineConfig({
                 link: '/heyiwei'
             },
             {
+                text: 'Claude Code 与 Codex 对比',
+                link: '/deepseek-claude-code-codex-harness'
+            },
+            {
                 text: '密码学与你所熟知的一切',
                 link: '/cryptography/',
                 items: [
